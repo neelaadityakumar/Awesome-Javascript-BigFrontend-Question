@@ -1,3 +1,5 @@
+//https://bigfrontend.dev/problem/implement-Array-prototype.flat
+
 function flat(arr, depth = 1) {
   const res = [];
   arr.forEach((item) => {
@@ -17,5 +19,3 @@ flat(arr, 1);
 // [1, 2, 3, [4]]
 flat(arr, 2);
 // [1, 2, 3, 4]
-
-//https://bigfrontend.dev/problem/implement-Array-prototype.flat

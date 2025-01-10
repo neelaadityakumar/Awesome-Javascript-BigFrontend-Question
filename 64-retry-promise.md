@@ -1,4 +1,6 @@
 ```javascript
+//https://bigfrontend.dev/problem/retry-promise-on-rejection
+
 function fetchWithAutoRetry(fetcher, maximumRetryCount) {
   return fetcher().catch((e) => {
     if (maximumRetryCount === 0) {
@@ -8,5 +10,4 @@ function fetchWithAutoRetry(fetcher, maximumRetryCount) {
     }
   });
 }
-//https://bigfrontend.dev/problem/retry-promise-on-rejection
 ```

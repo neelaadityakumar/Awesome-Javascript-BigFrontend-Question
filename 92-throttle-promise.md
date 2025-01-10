@@ -4,21 +4,19 @@
  * @param {number} max
  * @return {Promise}
  */
-async function throttlePromises(funcs, max) {
-  let start = 0;
-  const ret = [];
-  while (ret.length < funcs.length) {
-    const thunk = funcs.slice(start, start + max);
-    let res;
-    try {
-      res = await Promise.all(thunk.map((func) => func()));
-    } catch (ex) {
-      throw ex;
-    }
-    ret.push(...res);
-    start += max;
-  }
-  return ret;
-}
 //https://bigfrontend.dev/problem/throttle-Promises
+
+async function throttlePromises(funcs, max) {
+  const results = [];
+  let completed = 0,
+    total = funcs.length;
+  while (completed < total) {
+    const partialResults = await Promise.all(
+      funcs.slice(completed, completed + max).map((func) => func())
+    );
+    results.push(...partialResults);
+    completed += max;
+  }
+  return results;
+}
 ```

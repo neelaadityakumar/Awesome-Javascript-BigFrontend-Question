@@ -1,6 +1,18 @@
-<h1>title</h1>
+<h1>146. implement Array.prototype.reduce()
+</h1>
 
-<br/>
+<br/>Array.prototype.reduce() is a handy method to process arrays.
+
+Here is a simple task - Could you implement it by yourself?
+
+```js
+[1, 2, 3].myReduce((sum, item) => sum + item);
+```
+
+// 6
+do not use native Array.prototype.reduce() in your code
+your function is only tested against valid array (no array-like objects)
+thanks to pajadev for suggesting this
 <br/>
 
 ```javascript

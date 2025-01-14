@@ -1,6 +1,13 @@
-<h1>title</h1>
+<h1>60. create your own `new` operator
+</h1>
 
-<br/>
+<br/>new operator is used to create new instance objects.
+
+Do you know exactly what new does?
+
+You are asked to implement myNew(), which should return an object just as what new does but without using new.
+
+Pay attention to the return type of constructor.
 <br/>
 
 ```javascript

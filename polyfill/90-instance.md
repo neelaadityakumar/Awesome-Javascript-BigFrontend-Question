@@ -1,6 +1,25 @@
-<h1>title</h1>
+<h1>90. write your own `instanceof`
+</h1>
 
-<br/>
+<br/>Do you know how instanceOf works ?
+
+If so, please write you own myInstanceOf().
+
+```js
+class A {}
+class B extends A {}
+const b = new B();
+myInstanceOf(b, B); // true
+myInstanceOf(b, A); // true
+myInstanceOf(b, Object); // true
+function C() {}
+myInstanceOf(b, C); // false
+C.prototype = B.prototype;
+myInstanceOf(b, C); // true
+C.prototype = {};
+myInstanceOf(b, C); // false
+```
+
 <br/>
 
 ```javascript

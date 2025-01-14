@@ -1,3 +1,7 @@
+<h1>title</h1>
+
+<br/>
+<br/>
 ```javascript
 function throttle(func, wait) {
   // Track if we are waiting. Initially, we are not.
@@ -5,13 +9,13 @@ function throttle(func, wait) {
   // Track arguments of next call
   let nextArgsForExec = null;
 
-  return function (...args) {
-    // If we are waiting,
-    if (isWaiting) {
-      // ...store arguments of next call
-      nextArgsForExec = args;
-      return;
-    }
+return function (...args) {
+// If we are waiting,
+if (isWaiting) {
+// ...store arguments of next call
+nextArgsForExec = args;
+return;
+}
 
     // If we are not waiting, execute 'func' with passed arguments
     func.apply(this, args);
@@ -33,22 +37,23 @@ function throttle(func, wait) {
         nextArgsForExec = null;
       }
     }, wait);
-  };
+
+};
 }
 
 let currentTime = 0;
 const run = (input) => {
-  currentTime = 0;
-  const calls = [];
-  const func = (arg) => {
-    calls.push(`${arg}@${currentTime}`);
-  };
-  const throttled = throttle(func, 3);
-  input.forEach((call) => {
-    const [arg, time] = call.split("@");
-    setTimeout(() => throttled(arg), time);
-  });
-  return calls;
+currentTime = 0;
+const calls = [];
+const func = (arg) => {
+calls.push(`${arg}@${currentTime}`);
+};
+const throttled = throttle(func, 3);
+input.forEach((call) => {
+const [arg, time] = call.split("@");
+setTimeout(() => throttled(arg), time);
+});
+return calls;
 };
 console.log(run(["A@0", "B@2", "C@3"]));
 //toEqual(['A@0', 'C@3'])
@@ -57,15 +62,18 @@ console.log(run(["A@0", "B@2", "C@3"]));
 
 //A more simple throttle function
 function throttle(func, interval) {
-  let isRunning = false;
-  return function (...args) {
-    if (!isRunning) {
-      isRunning = true;
-      func.apply(this, args);
-      setTimeout(() => {
-        isRunning = false;
-      }, interval);
-    }
-  };
+let isRunning = false;
+return function (...args) {
+if (!isRunning) {
+isRunning = true;
+func.apply(this, args);
+setTimeout(() => {
+isRunning = false;
+}, interval);
 }
+};
+}
+
+```
+
 ```

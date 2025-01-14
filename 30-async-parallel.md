@@ -1,3 +1,8 @@
+<h1>title</h1>
+
+<br/>
+<br/>
+
 ```javascript
 function parallel(funcs) {
   let hasError = false,
@@ -24,4 +29,8 @@ function parallel(funcs) {
     });
   };
 }
+```
+
+```
+
 ```

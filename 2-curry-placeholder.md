@@ -21,9 +21,13 @@ curriedJoin(_, _, _)(1)(_, 3)(2); // '1_2_3'
 ```
 
 Read more:
+<br/>
 
 https://javascript.info/currying-partials
+<br/>
 https://lodash.com/docs/4.17.15#curry
+<br/>
+
 https://github.com/planttheidea/curriable
 
 ```javascript

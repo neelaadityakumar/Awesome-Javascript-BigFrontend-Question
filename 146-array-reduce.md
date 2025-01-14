@@ -1,3 +1,8 @@
+<h1>title</h1>
+
+<br/>
+<br/>
+
 ```javascript
 Array.prototype.myReduce = function (...args) {
   const hasInitialValue = args.length > 1;

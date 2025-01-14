@@ -1,4 +1,3 @@
-```html
 <h1>1.implement curry()</h1>
 <br />
 
@@ -10,7 +9,6 @@ curried one.
 <br />
 
 Here is an example
-```
 
 ```js
 const join = (a, b, c) => {

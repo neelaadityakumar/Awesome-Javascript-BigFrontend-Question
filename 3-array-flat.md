@@ -1,19 +1,20 @@
-<h1>title</h1>
+<h1>3. implement Array.prototype.flat()
+</h1>
 
 <br/>
-<br/>
 
-3. implement Array.prototype.flat()
+There is already Array.prototype.flat() in JavaScript (ES2019), which reduces the nesting of Array. Please implement your own.<br/>
 
-There is already Array.prototype.flat() in JavaScript (ES2019), which reduces the nesting of Array. Please implement your own.
-
+```js
 const arr = [1, [2], [3, [4]]];
-flat(arr)
+flat(arr);
 // [1, 2, 3, [4]]
-flat(arr, 1)
+flat(arr, 1);
 // [1, 2, 3, [4]]
-flat(arr, 2)
+flat(arr, 2);
 // [1, 2, 3, 4]
+```
+
 follow up
 
 Are you able to solve it both recursively and iteratively? How do you handle sparse array?

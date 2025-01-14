@@ -1,6 +1,17 @@
-<h1>title</h1>
+<h1>23. create a sum()
+</h1>
 
 <br/>
+Create a sum(), which makes following possible
+
+```js
+const sum1 = sum(1);
+sum1(2) == 3; // true
+sum1(3) == 4; // true
+sum(1)(2)(3) == 6; // true
+sum(5)(-1)(2) == 6; // true
+```
+
 <br/>
 
 ```javascript

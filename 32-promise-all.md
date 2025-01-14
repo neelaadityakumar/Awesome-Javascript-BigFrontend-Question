@@ -1,6 +1,17 @@
-<h1>title</h1>
+<h1>32. implement `Promise.all()`
+</h1>
 
 <br/>
+The Promise.all() method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises
+
+source - MDN
+
+Could you write your own all() ? which should works the same as Promise.all()
+
+note
+
+Do not use Promise.all() directly, it is not helping
+
 <br/>
 
 ```javascript

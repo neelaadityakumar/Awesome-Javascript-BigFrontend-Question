@@ -1,10 +1,16 @@
-1. implement curry()
+```html
+<h1>1.implement curry()</h1>
+<br />
 
 Currying is a useful technique used in JavaScript applications.
+<br />
 
-Please implement a curry() function, which accepts a function and return a curried one.
+Please implement a curry() function, which accepts a function and return a
+curried one.
+<br />
 
 Here is an example
+```
 
 ```js
 const join = (a, b, c) => {

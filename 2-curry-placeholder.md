@@ -1,3 +1,31 @@
+<h1>
+2.implement curry() with placeholder support
+
+</h1>
+
+This is a follow-up on 1. implement curry()
+
+please implement curry() which also supports placeholder.
+
+Here is an example
+
+```js
+const join = (a, b, c) => {
+  return `${a}_${b}_${c}`;
+};
+const curriedJoin = curry(join);
+const _ = curry.placeholder;
+curriedJoin(1, 2, 3); // '1_2_3'
+curriedJoin(_, 2)(1, 3); // '1_2_3'
+curriedJoin(_, _, _)(1)(_, 3)(2); // '1_2_3'
+```
+
+Read more:
+
+https://javascript.info/currying-partials
+https://lodash.com/docs/4.17.15#curry
+https://github.com/planttheidea/curriable
+
 ```javascript
 function curry(func) {
   return function curried(...args) {

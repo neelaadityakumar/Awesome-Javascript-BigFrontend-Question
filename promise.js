@@ -54,8 +54,6 @@ class MyPromise {
     // This method is called when state becomes FULFILLED, REJECTED,
     // or if .then is called on an already FULFILLED/REJECTED promise.
     // RUNNING state does not trigger handlers on its own.
-    if (this.#state === PENDING || this.#state === RUNNING) return;
-
     const handlersToExecute = this.#handlers;
     this.#handlers = [];
 
